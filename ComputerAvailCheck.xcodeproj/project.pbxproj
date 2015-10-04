@@ -50,6 +50,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		405FC00D1BC0CFB000E3F206 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		405FC00E1BC0CFB800E3F206 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				407523BC1BC0C1740071211D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		405FC00F1BC0CFC200E3F206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		405FC0101BC0D02300E3F206 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		407523AE1BC0C1740071211D = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +101,11 @@
 			isa = PBXGroup;
 			children = (
 				407523BA1BC0C1740071211D /* AppDelegate.swift */,
-				407523BC1BC0C1740071211D /* ViewController.swift */,
 				407523BE1BC0C1740071211D /* Main.storyboard */,
+				405FC00D1BC0CFB000E3F206 /* Model */,
+				405FC00F1BC0CFC200E3F206 /* View */,
+				405FC00E1BC0CFB800E3F206 /* Controller */,
+				405FC0101BC0D02300E3F206 /* Utility */,
 				407523C11BC0C1740071211D /* Assets.xcassets */,
 				407523C31BC0C1740071211D /* LaunchScreen.storyboard */,
 				407523C61BC0C1740071211D /* Info.plist */,
@@ -319,6 +351,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ComputerAvailCheck/ComputerAvailCheck-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bk.ComputerAvailCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ComputerAvailCheck/ComputerAvailCheck-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
