@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController, SOAPEngineDelegate {
 
@@ -38,12 +39,16 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	// MARK: Instance Method
 	
 	func loadBuildingData() {
+        dispatch_async(dispatch_get_main_queue()) {
+            SVProgressHUD.showWithStatus("Loading...")
+        }
 		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
+        SVProgressHUD.dismiss()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
