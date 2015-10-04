@@ -13,9 +13,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		
-		let soap = SOAPEngine()
-		soap.userAgent = "SOAPEngine"
 	}
 
 	override func didReceiveMemoryWarning() {
