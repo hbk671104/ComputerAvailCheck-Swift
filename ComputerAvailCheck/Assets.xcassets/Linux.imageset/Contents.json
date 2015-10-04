@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "Linux.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "scale" : "2x",
-      "filename" : "Linux@2x.png"
+      "filename" : "Linux@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "iphone",
