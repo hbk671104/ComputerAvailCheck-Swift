@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PKHUD
 
 class ViewController: UIViewController, SOAPEngineDelegate {
 
@@ -19,12 +18,13 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 
 	var soapManager = SoapManager()
 	var buildingModelArray: NSMutableArray = []
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		// Soap manager init
-		soapManager.delegate = self
+		self.soapManager.delegate = self
 		
 		// Make a request
 		self.loadBuildingData()
@@ -38,15 +38,12 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	// MARK: Instance Method
 	
 	func loadBuildingData() {
-		PKHUD.sharedHUD.contentView = PKHUDProgressView()
-		PKHUD.sharedHUD.show()
-		soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
+		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
-		PKHUD.sharedHUD.hide()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
@@ -54,9 +51,9 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 				if let buildings: NSArray = ((documentElement as! NSDictionary)["Buildings"] as! NSArray) {
 					for dict in buildings {
 						let buildingModel = BuildingModel(dictionary: dict as! NSDictionary)
-						buildingModelArray.addObject(buildingModel)
+						self.buildingModelArray.addObject(buildingModel)
 					}
-					buildingTableView.reloadData()
+					self.buildingTableView.reloadData()
 				}
 			}
 		}
