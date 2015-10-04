@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		401D924D1BC0FF3100D59FF1 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */; settings = {ASSET_TAGS = (); }; };
+		40344E541BC15AED002F33B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405FC01B1BC0FA2D00E3F206 /* MapKit.framework */; };
 		4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0111BC0D48D00E3F206 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		405FC01A1BC0DABB00E3F206 /* SoapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0191BC0DABB00E3F206 /* SoapManager.swift */; settings = {ASSET_TAGS = (); }; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40344E541BC15AED002F33B7 /* MapKit.framework in Frameworks */,
 				807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
