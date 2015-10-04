@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class ViewController: UIViewController, SOAPEngineDelegate {
 
@@ -16,7 +15,8 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	let roomSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Rooms"
 	
 	@IBOutlet weak var buildingTableView: UITableView!
-
+    var refreshControl = UIRefreshControl()
+    
 	var soapManager = SoapManager()
 	var buildingModelArray: NSMutableArray = []
 	
@@ -27,8 +27,15 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 		// Soap manager init
 		self.soapManager.delegate = self
 		
+        // Add refresh control
+        self.refreshControl.tintColor = UIColor.whiteColor()
+        self.refreshControl.addTarget(self, action: "loadBuildingData", forControlEvents: UIControlEvents.ValueChanged)
+        self.buildingTableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
+        self.buildingTableView.addSubview(self.refreshControl)
+
 		// Make a request
-		self.loadBuildingData()
+		self.refreshControl.beginRefreshing()
+        self.loadBuildingData()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -37,18 +44,16 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	}
 	
 	// MARK: Instance Method
-	
+    
 	func loadBuildingData() {
-        dispatch_async(dispatch_get_main_queue()) {
-            SVProgressHUD.showWithStatus("Loading...")
-        }
 		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
-        SVProgressHUD.dismiss()
+        // End refreshing
+        self.refreshControl.endRefreshing()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
@@ -77,6 +82,17 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 		tableViewCell.buildingModel = buildingModelArray[indexPath.row] as! BuildingModel
 		return tableViewCell
 	}
+    
+    // MARK: UITableViewDelegate
 	
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingSectionHeader") as UITableViewCell!
+        
+        return headerView
+    }
 }
 

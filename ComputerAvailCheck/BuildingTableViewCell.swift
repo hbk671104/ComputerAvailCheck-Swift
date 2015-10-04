@@ -16,16 +16,13 @@ class BuildingTableViewCell: UITableViewCell {
 	@IBOutlet weak var linuxCountLabel: UILabel!
 	
 	// Model
-	var buildingModel: BuildingModel {
-		get {
-			return self.buildingModel
-		}
-		set {
-			buildingNameLabel.text = newValue.Building
-			windowsCountLabel.text = String(newValue.nWindows)
-			macCountLabel.text = String(newValue.nMacintosh)
-			linuxCountLabel.text = String(newValue.nLinux)
-		}
+	var buildingModel: BuildingModel! {
+        didSet {
+            buildingNameLabel.text = buildingModel.Building
+            windowsCountLabel.text = String(buildingModel.nWindows)
+            macCountLabel.text = String(buildingModel.nMacintosh)
+            linuxCountLabel.text = String(buildingModel.nLinux)
+        }
 	}
 	
     override func awakeFromNib() {

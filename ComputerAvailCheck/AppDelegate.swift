@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 
@@ -16,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+        
+        // HUD Init
+        SVProgressHUD.setForegroundColor(UIColor(red: 32/255.0, green: 65/255.0, blue: 123/255.0, alpha: 1.0))
+        SVProgressHUD.setBackgroundColor(UIColor(white: 1, alpha: 0.85))
 		return true
 	}
 
