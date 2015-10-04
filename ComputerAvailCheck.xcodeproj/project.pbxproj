@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		401D924D1BC0FF3100D59FF1 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */; settings = {ASSET_TAGS = (); }; };
+		4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0111BC0D48D00E3F206 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		405FC01A1BC0DABB00E3F206 /* SoapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0191BC0DABB00E3F206 /* SoapManager.swift */; settings = {ASSET_TAGS = (); }; };
-		405FC01C1BC0FA2D00E3F206 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405FC01B1BC0FA2D00E3F206 /* MapKit.framework */; };
 		407523BB1BC0C1740071211D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407523BA1BC0C1740071211D /* AppDelegate.swift */; };
 		407523C01BC0C1740071211D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407523BE1BC0C1740071211D /* Main.storyboard */; };
 		407523C21BC0C1740071211D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407523C11BC0C1740071211D /* Assets.xcassets */; };
 		407523C51BC0C1740071211D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407523C31BC0C1740071211D /* LaunchScreen.storyboard */; };
-		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34D70D6691C9288952B2E580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
+		4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
 		405FC00A1BC0CC8B00E3F206 /* ComputerAvailCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputerAvailCheck-Bridging-Header.h"; sourceTree = "<group>"; };
 		405FC0111BC0D48D00E3F206 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		405FC0191BC0DABB00E3F206 /* SoapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapManager.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				405FC01C1BC0FA2D00E3F206 /* MapKit.framework in Frameworks */,
 				807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +68,7 @@
 		405FC0141BC0D4AD00E3F206 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,6 +260,7 @@
 				401D924D1BC0FF3100D59FF1 /* BuildingModel.swift in Sources */,
 				405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */,
 				407523BB1BC0C1740071211D /* AppDelegate.swift in Sources */,
+				4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

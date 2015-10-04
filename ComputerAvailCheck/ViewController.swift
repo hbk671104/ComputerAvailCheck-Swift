@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import PKHUD
 
 class ViewController: UIViewController, SOAPEngineDelegate {
 
 	let asmxURL = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx"
 	let buildingSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Buildings"
 	let roomSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Rooms"
-		
+	
+	@IBOutlet weak var buildingTableView: UITableView!
+
 	var soapManager = SoapManager()
 	var buildingModelArray: NSMutableArray = []
 	override func viewDidLoad() {
@@ -24,7 +27,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 		soapManager.delegate = self
 		
 		// Make a request
-		soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
+		self.loadBuildingData()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -32,9 +35,18 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 		// Dispose of any resources that can be recreated.
 	}
 	
+	// MARK: Instance Method
+	
+	func loadBuildingData() {
+		PKHUD.sharedHUD.contentView = PKHUDProgressView()
+		PKHUD.sharedHUD.show()
+		soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
+	}
+	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
+		PKHUD.sharedHUD.hide()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
@@ -44,9 +56,25 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 						let buildingModel = BuildingModel(dictionary: dict as! NSDictionary)
 						buildingModelArray.addObject(buildingModel)
 					}
+					buildingTableView.reloadData()
 				}
 			}
 		}
 	}
+	
+	// MARK: UITableViewDataSource
+	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return buildingModelArray.count
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let tableViewCell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingCell", forIndexPath: indexPath) as! BuildingTableViewCell
+		
+		// Set model
+		tableViewCell.buildingModel = buildingModelArray[indexPath.row] as! BuildingModel
+		return tableViewCell
+	}
+	
 }
 

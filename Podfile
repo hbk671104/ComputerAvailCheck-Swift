@@ -4,6 +4,7 @@ use_frameworks!
 
 pod 'SOAPEngine', '~> 1.24'
 pod 'EVReflection', '~> 2.9'
+pod 'PKHUD', '~> 2.2.3'
 
 target 'ComputerAvailCheck' do
 
