@@ -10,14 +10,10 @@ import UIKit
 import MapKit
 
 class BuildingPin: MKPointAnnotation {
-    var annotation: BuildingAnnotation {
+    var annotation: BuildingAnnotation! {
         didSet {
-            self.coordinate = CLLocationCoordinate2D(latitude: (annotation.latitude as NSString).doubleValue, longitude: (annotation.longitude as NSString).doubleValue)
+            self.coordinate = CLLocationCoordinate2DMake(annotation.longitude, annotation.latitude)
             self.title = annotation.name
         }
-    }
-    init(buildingAnnotation: BuildingAnnotation) {
-        self.annotation = buildingAnnotation
-        super.init()
     }
 }

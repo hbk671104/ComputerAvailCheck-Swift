@@ -97,7 +97,8 @@ class ViewController: UIViewController, SOAPEngineDelegate {
                             let index = buildingNameArray.indexOfObject(buildingModel.Building)
                             let targetBuildingDict = jsonArray[index] as! NSDictionary
                             let buildingAnnotation = BuildingAnnotation(dictionary: targetBuildingDict)
-                            let buildingPin = BuildingPin(buildingAnnotation: buildingAnnotation)
+                            let buildingPin = BuildingPin()
+                            buildingPin.annotation = buildingAnnotation
                             self.buildingPinArray.append(buildingPin)
                         }
                     }
