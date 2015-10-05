@@ -24,6 +24,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SIn-Lv-a9p" secondAttribute="height" multiplier="16:9" id="ODn-O5-RJq"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gnc-Tf-LrA"/>
+                                </connections>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-EY-bna">
                                 <rect key="frame" x="-4" y="184" width="328" height="383.5"/>

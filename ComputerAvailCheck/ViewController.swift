@@ -39,7 +39,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
         self.buildingTableView.addSubview(self.refreshControl)
 
         // Center map
-        let region = MKCoordinateRegionMakeWithDistance(self.initialLocation, 1080, 1920)
+        let region = MKCoordinateRegionMakeWithDistance(self.initialLocation, 800, 800)
         self.buildingMapView.region = region
         
 		// Make a request
@@ -56,6 +56,8 @@ class ViewController: UIViewController, SOAPEngineDelegate {
     
 	func loadBuildingData() {
 		self.buildingModelArray.removeAll()
+        self.buildingMapView.removeAnnotations(self.buildingPinArray)
+        self.buildingPinArray.removeAll()
 		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
@@ -90,10 +92,12 @@ class ViewController: UIViewController, SOAPEngineDelegate {
                     
                     for dict in buildings {
                         let buildingModel = BuildingModel(dictionary: dict as! NSDictionary)
-                        self.buildingModelArray.append(buildingModel)
-    
                         // Add available building
                         if buildingNameArray.containsObject(buildingModel.Building) {
+                            // Building model
+                            self.buildingModelArray.append(buildingModel)
+                            
+                            // Building pin
                             let index = buildingNameArray.indexOfObject(buildingModel.Building)
                             let targetBuildingDict = jsonArray[index] as! NSDictionary
                             let buildingAnnotation = BuildingAnnotation(dictionary: targetBuildingDict)
@@ -125,6 +129,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let tableViewCell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingCell", forIndexPath: indexPath) as! BuildingTableViewCell
 		
+        print(indexPath)
 		// Set model
 		tableViewCell.buildingModel = self.buildingModelArray[indexPath.row]
 		return tableViewCell
@@ -140,6 +145,43 @@ class ViewController: UIViewController, SOAPEngineDelegate {
         let headerView: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingSectionHeader") as UITableViewCell!
         
         return headerView
+    }
+    
+    // MARK: MKMapViewDelegate
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? BuildingPin {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.animatesDrop = true
+                view.canShowCallout = true
+                view.rightCalloutAccessoryView = UIButton(type:.DetailDisclosure)
+            }
+            
+            // Set color based on availability ratio
+            let index = self.buildingPinArray.indexOf(annotation)
+            let buildingModel = self.buildingModelArray[index!]
+            if buildingModel.nAvailable < buildingModel.nComputers / 2 {
+                view.pinColor = .Red
+            } else {
+                view.pinColor = .Green
+            }
+            return view
+        }
+        return nil
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        let pin = view.annotation as! BuildingPin
+        let index = self.buildingPinArray.indexOf(pin)
+        let indexPath = NSIndexPath(forRow: index!, inSection: 0)
+        self.buildingTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
     }
     
 }
