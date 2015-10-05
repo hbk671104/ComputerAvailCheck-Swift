@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // HUD Init
         SVProgressHUD.setForegroundColor(UIColor(red: 32/255.0, green: 65/255.0, blue: 123/255.0, alpha: 1.0))
-        SVProgressHUD.setBackgroundColor(UIColor(white: 1, alpha: 0.85))
+        SVProgressHUD.setBackgroundColor(UIColor(white: 1, alpha: 0.9))
 		return true
 	}
 

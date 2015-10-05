@@ -176,6 +176,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buildingMapView" destination="SIn-Lv-a9p" id="IH7-cO-z1N"/>
                         <outlet property="buildingTableView" destination="MeA-EY-bna" id="hZ6-eU-GW2"/>
                     </connections>
                 </viewController>
