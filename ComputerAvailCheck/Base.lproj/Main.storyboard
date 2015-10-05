@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GZ6-6C-sFh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -178,14 +178,68 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MeA-EY-bna" secondAttribute="trailing" constant="-20" id="q33-cQ-fLN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ivh-rk-D7a"/>
                     <connections>
                         <outlet property="buildingMapView" destination="SIn-Lv-a9p" id="IH7-cO-z1N"/>
                         <outlet property="buildingTableView" destination="MeA-EY-bna" id="hZ6-eU-GW2"/>
+                        <segue destination="yaG-Ry-gQb" kind="push" identifier="roomPush" id="uys-kU-5KX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="462"/>
+            <point key="canvasLocation" x="849" y="462"/>
+        </scene>
+        <!--Room View Controller-->
+        <scene sceneID="ZMA-hO-fff">
+            <objects>
+                <viewController id="yaG-Ry-gQb" customClass="RoomViewController" customModule="ComputerAvailCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uc9-Zi-OML"/>
+                        <viewControllerLayoutGuide type="bottom" id="V5u-vS-5Iv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RMN-9p-Ubd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-ot-KfH">
+                                <rect key="frame" x="-4" y="20" width="328" height="548"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zxX-ot-KfH" firstAttribute="top" secondItem="Uc9-Zi-OML" secondAttribute="bottom" id="59z-cQ-RQ2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zxX-ot-KfH" secondAttribute="trailing" constant="-20" id="Kbg-U5-I1f"/>
+                            <constraint firstItem="zxX-ot-KfH" firstAttribute="leading" secondItem="RMN-9p-Ubd" secondAttribute="leadingMargin" constant="-20" id="Kc3-fV-VP6"/>
+                            <constraint firstItem="V5u-vS-5Iv" firstAttribute="top" secondItem="zxX-ot-KfH" secondAttribute="bottom" id="mzg-Bg-NM5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rh4-re-MSm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gb-fj-bsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hC4-Tb-gC7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GZ6-6C-sFh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="6gO-i2-ngz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sFq-Ia-ekm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VsE-2U-nPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="462"/>
         </scene>
     </scenes>
     <resources>
@@ -193,4 +247,5 @@
         <image name="Mac" width="42" height="42"/>
         <image name="Windows" width="42" height="42"/>
     </resources>
+    <color key="tintColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -161,7 +161,7 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Goes to detail view")
+        self.performSegueWithIdentifier("roomPush", sender: nil)
     }
     
     // MARK: MKMapViewDelegate
@@ -202,7 +202,7 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("Goes to detail view")
+        self.performSegueWithIdentifier("roomPush", sender: nil)
     }
     
     // MARK: CLLocationManagerDelegate
