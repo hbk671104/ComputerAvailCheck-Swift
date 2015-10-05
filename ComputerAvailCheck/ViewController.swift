@@ -46,6 +46,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	// MARK: Instance Method
     
 	func loadBuildingData() {
+		self.buildingModelArray.removeAllObjects()
 		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
