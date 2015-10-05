@@ -13,4 +13,5 @@ class BuildingAnnotation: EVObject {
     var name: String = ""
     var latitude: Double = 0
     var longitude: Double = 0
+    var buildingModel: BuildingModel!
 }

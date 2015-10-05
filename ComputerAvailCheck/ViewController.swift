@@ -101,6 +101,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
                             let index = buildingNameArray.indexOfObject(buildingModel.Building)
                             let targetBuildingDict = jsonArray[index] as! NSDictionary
                             let buildingAnnotation = BuildingAnnotation(dictionary: targetBuildingDict)
+                            buildingAnnotation.buildingModel = buildingModel
                             let buildingPin = BuildingPin()
                             buildingPin.annotation = buildingAnnotation
                             self.buildingPinArray.append(buildingPin)
@@ -129,7 +130,6 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let tableViewCell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingCell", forIndexPath: indexPath) as! BuildingTableViewCell
 		
-        print(indexPath)
 		// Set model
 		tableViewCell.buildingModel = self.buildingModelArray[indexPath.row]
 		return tableViewCell

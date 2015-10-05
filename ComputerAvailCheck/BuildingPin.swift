@@ -14,6 +14,7 @@ class BuildingPin: MKPointAnnotation {
         didSet {
             self.coordinate = CLLocationCoordinate2DMake(annotation.latitude, annotation.longitude)
             self.title = annotation.name
+            self.subtitle = "Total Available: \(annotation.buildingModel.nAvailable)"
         }
     }
 }
