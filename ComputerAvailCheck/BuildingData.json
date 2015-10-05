@@ -2,188 +2,188 @@
   "buildingData": [
     {
       "name": "AgSci",
-      "longitude": "40.803636",
-      "latitude": "-77.863764"
+      "latitude": "40.803636",
+      "longitude": "-77.863764"
     },
     {
       "name": "Beaver",
-      "longitude": "40.800507",
-      "latitude": "-77.857044"
+      "latitude": "40.800507",
+      "longitude": "-77.857044"
     },
     {
       "name": "Boucke",
-      "longitude": "40.799342",
-      "latitude": "-77.861819"
+      "latitude": "40.799342",
+      "longitude": "-77.861819"
     },
     {
       "name": "Business Bldg",
-      "longitude": "40.803926",
-      "latitude": "-77.865199"
+      "latitude": "40.803926",
+      "longitude": "-77.865199"
     },
     {
       "name": "Cedar",
-      "longitude": "40.799135",
-      "latitude": "-77.868380"
+      "latitude": "40.799135",
+      "longitude": "-77.868380"
     },
     {
       "name": "Chambers",
-      "longitude": "40.798325",
-      "latitude": "-77.867731"
+      "latitude": "40.798325",
+      "longitude": "-77.867731"
     },
     {
       "name": "Davey Lab",
-      "longitude": "40.798116",
-      "latitude": "-77.862798"
+      "latitude": "40.798116",
+      "longitude": "-77.862798"
     },
     {
       "name": "Deike",
-      "longitude": "40.794266",
-      "latitude": "-77.865405"
+      "latitude": "40.794266",
+      "longitude": "-77.865405"
     },
     {
       "name": "EAL",
-      "longitude": "40.804889",
-      "latitude": "-77.856182"
+      "latitude": "40.804889",
+      "longitude": "-77.856182"
     },
     {
       "name": "EES",
-      "longitude": "40.792146",
-      "latitude": "-77.870880"
+      "latitude": "40.792146",
+      "longitude": "-77.870880"
     },
     {
       "name": "Ferguson",
-      "longitude": "40.801011",
-      "latitude": "-77.863638"
+      "latitude": "40.801011",
+      "longitude": "-77.863638"
     },
     {
       "name": "Findlay",
-      "longitude": "40.806479",
-      "latitude": "-77.862265"
+      "latitude": "40.806479",
+      "longitude": "-77.862265"
     },
     {
       "name": "Forest Resources",
-      "longitude": "40.80483",
-      "latitude": "-77.863994"
+      "latitude": "40.80483",
+      "longitude": "-77.863994"
     },
     {
       "name": "Hammond",
-      "longitude": "40.793742",
-      "latitude": "-77.862985"
+      "latitude": "40.793742",
+      "longitude": "-77.862985"
     },
     {
       "name": "Hosler",
-      "longitude": "40.794668",
-      "latitude": "-77.865838"
+      "latitude": "40.794668",
+      "longitude": "-77.865838"
     },
     {
       "name": "HUB",
-      "longitude": "40.798136",
-      "latitude": "-77.861272"
+      "latitude": "40.798136",
+      "longitude": "-77.861272"
     },
     {
       "name": "IST",
-      "longitude": "40.793673",
-      "latitude": "-77.868112"
+      "latitude": "40.793673",
+      "longitude": "-77.868112"
     },
     {
       "name": "Katz",
-      "longitude": "40.807461",
-      "latitude": "-77.866494"
+      "latitude": "40.807461",
+      "longitude": "-77.866494"
     },
     {
       "name": "Keller",
-      "longitude": "40.798144",
-      "latitude": "-77.870666"
+      "latitude": "40.798144",
+      "longitude": "-77.870666"
     },
     {
       "name": "LifeSci",
-      "longitude": "40.800934",
-      "latitude": "-77.861492"
+      "latitude": "40.800934",
+      "longitude": "-77.861492"
     },
     {
       "name": "Mateer",
-      "longitude": "40.798623",
-      "latitude": "-77.870312"
+      "latitude": "40.798623",
+      "longitude": "-77.870312"
     },
     {
       "name": "Nursing Sciences",
-      "longitude": "40.796552",
-      "latitude": "-77.859812"
+      "latitude": "40.796552",
+      "longitude": "-77.859812"
     },
     {
       "name": "Osmond",
-      "longitude": "40.798607",
-      "latitude": "-77.862223"
+      "latitude": "40.798607",
+      "longitude": "-77.862223"
     },
     {
       "name": "Paterno",
-      "longitude": "40.798493",
-      "latitude": "-77.865452"
+      "latitude": "40.798493",
+      "longitude": "-77.865452"
     },
     {
       "name": "Patterson",
-      "longitude": "40.800239",
-      "latitude": "-77.864937"
+      "latitude": "40.800239",
+      "longitude": "-77.864937"
     },
     {
       "name": "Pollock",
-      "longitude": "40.801129",
-      "latitude": "-77.858510"
+      "latitude": "40.801129",
+      "longitude": "-77.858510"
     },
     {
       "name": "Rackley",
-      "longitude": "40.798233",
-      "latitude": "-77.868628"
+      "latitude": "40.798233",
+      "longitude": "-77.868628"
     },
     {
       "name": "RecHall",
-      "longitude": "40.795435",
-      "latitude": "-77.868651"
+      "latitude": "40.795435",
+      "longitude": "-77.868651"
     },
     {
       "name": "Redifer",
-      "longitude": "40.799585",
-      "latitude": "-77.855996"
+      "latitude": "40.799585",
+      "longitude": "-77.855996"
     },
     {
       "name": "Sackett",
-      "longitude": "40.794757",
-      "latitude": "-77.862641"
+      "latitude": "40.794757",
+      "longitude": "-77.862641"
     },
     {
       "name": "Sparks",
-      "longitude": "40.796962",
-      "latitude": "-77.865757"
+      "latitude": "40.796962",
+      "longitude": "-77.865757"
     },
     {
       "name": "Stuckeman",
-      "longitude": "40.801108",
-      "latitude": "-77.866744"
+      "latitude": "40.801108",
+      "longitude": "-77.866744"
     },
     {
       "name": "Walker",
-      "longitude": "40.79323",
-      "latitude": "-77.866857"
+      "latitude": "40.79323",
+      "longitude": "-77.866857"
     },
     {
       "name": "Waring",
-      "longitude": "40.795715",
-      "latitude": "-77.867405"
+      "latitude": "40.795715",
+      "longitude": "-77.867405"
     },
     {
       "name": "Warnock",
-      "longitude": "40.80294",
-      "latitude": "-77.866079"
+      "latitude": "40.80294",
+      "longitude": "-77.866079"
     },
     {
       "name": "West Pattee",
-      "longitude": "40.797546",
-      "latitude": "-77.866610"
+      "latitude": "40.797546",
+      "longitude": "-77.866610"
     },
     {
       "name": "Willard",
-      "longitude": "40.795967",
-      "latitude": "-77.864255"
+      "latitude": "40.795967",
+      "longitude": "-77.864255"
     }
   ]
 }

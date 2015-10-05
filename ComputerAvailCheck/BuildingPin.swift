@@ -12,7 +12,7 @@ import MapKit
 class BuildingPin: MKPointAnnotation {
     var annotation: BuildingAnnotation! {
         didSet {
-            self.coordinate = CLLocationCoordinate2DMake(annotation.longitude, annotation.latitude)
+            self.coordinate = CLLocationCoordinate2DMake(annotation.latitude, annotation.longitude)
             self.title = annotation.name
         }
     }
