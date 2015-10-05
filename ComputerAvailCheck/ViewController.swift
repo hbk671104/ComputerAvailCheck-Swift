@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import SVProgressHUD
 
-class ViewController: UIViewController, SOAPEngineDelegate {
+class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
 
 	let asmxURL = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx"
 	let buildingSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Buildings"
@@ -22,6 +22,7 @@ class ViewController: UIViewController, SOAPEngineDelegate {
     var refreshControl = UIRefreshControl()
     
 	var soapManager = SoapManager()
+    var locationManager = CLLocationManager()
 	var buildingModelArray: [BuildingModel] = []
     var buildingPinArray: [BuildingPin] = []
     
@@ -29,9 +30,10 @@ class ViewController: UIViewController, SOAPEngineDelegate {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		// Soap manager init
+		// Delegate
 		self.soapManager.delegate = self
-		
+		self.locationManager.delegate = self
+        
         // Add refresh control
         self.refreshControl.tintColor = UIColor.whiteColor()
         self.refreshControl.addTarget(self, action: "loadBuildingData", forControlEvents: UIControlEvents.ValueChanged)
@@ -47,6 +49,11 @@ class ViewController: UIViewController, SOAPEngineDelegate {
         self.loadBuildingData()
 	}
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationAuthorizationStatus()
+    }
+    
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -70,6 +77,12 @@ class ViewController: UIViewController, SOAPEngineDelegate {
             print(error.localizedDescription)
         }
         return []
+    }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() != .AuthorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
 	// MARK: SOAPEngineDelegate
@@ -147,6 +160,10 @@ class ViewController: UIViewController, SOAPEngineDelegate {
         return headerView
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Goes to detail view")
+    }
+    
     // MARK: MKMapViewDelegate
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -182,6 +199,18 @@ class ViewController: UIViewController, SOAPEngineDelegate {
         let index = self.buildingPinArray.indexOf(pin)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
         self.buildingTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print("Goes to detail view")
+    }
+    
+    // MARK: CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedWhenInUse {
+            self.buildingMapView.showsUserLocation = true
+        }
     }
     
 }

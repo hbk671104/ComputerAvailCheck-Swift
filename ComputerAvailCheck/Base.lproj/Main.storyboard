@@ -28,7 +28,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Gnc-Tf-LrA"/>
                                 </connections>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-EY-bna">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-EY-bna">
                                 <rect key="frame" x="-4" y="184" width="328" height="383.5"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +85,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="buildingCell" rowHeight="50" id="hGO-PK-iw6" customClass="BuildingTableViewCell" customModule="ComputerAvailCheck" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="buildingCell" rowHeight="50" id="hGO-PK-iw6" customClass="BuildingTableViewCell" customModule="ComputerAvailCheck" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="328" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGO-PK-iw6" id="XA3-O6-ylu">
