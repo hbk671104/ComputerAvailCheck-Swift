@@ -56,15 +56,20 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
     }
     
 	// MARK: Instance Method
+	
 	func loadRoomData() {
-		self.roomModelArray.removeAll()
 		SOAPEngine.sharedInstance().clearValues()
 		SOAPEngine.sharedInstance().requestURL(asmxURL, soapAction: roomSoapAction, value: self.oppCode, forKey: "OppCode")
+	}
+	
+	func cleanData() {
+		self.roomModelArray.removeAll()
 	}
 	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
+		self.cleanData()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {

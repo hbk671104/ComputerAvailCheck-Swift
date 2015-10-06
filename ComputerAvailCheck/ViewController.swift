@@ -72,9 +72,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	// MARK: Instance Method
     
 	func loadBuildingData() {
-		self.buildingModelArray.removeAll()
-        self.buildingMapView.removeAnnotations(self.buildingPinArray)
-        self.buildingPinArray.removeAll()
 		SOAPEngine.sharedInstance().requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
@@ -94,10 +91,17 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
             locationManager.requestWhenInUseAuthorization()
         }
     }
-    
+	
+	func cleanData() {
+		self.buildingModelArray.removeAll()
+		self.buildingMapView.removeAnnotations(self.buildingPinArray)
+		self.buildingPinArray.removeAll()
+	}
+	
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
+		self.cleanData()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
