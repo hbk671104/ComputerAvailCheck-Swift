@@ -11,11 +11,12 @@
 		40344E541BC15AED002F33B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405FC01B1BC0FA2D00E3F206 /* MapKit.framework */; };
 		4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0111BC0D48D00E3F206 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		405FC01A1BC0DABB00E3F206 /* SoapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0191BC0DABB00E3F206 /* SoapManager.swift */; settings = {ASSET_TAGS = (); }; };
 		407523BB1BC0C1740071211D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407523BA1BC0C1740071211D /* AppDelegate.swift */; };
 		407523C01BC0C1740071211D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407523BE1BC0C1740071211D /* Main.storyboard */; };
 		407523C21BC0C1740071211D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407523C11BC0C1740071211D /* Assets.xcassets */; };
 		407523C51BC0C1740071211D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407523C31BC0C1740071211D /* LaunchScreen.storyboard */; };
+		40B52D1F1BC3B05B009B27E5 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B52D1E1BC3B05B009B27E5 /* RoomModel.swift */; settings = {ASSET_TAGS = (); }; };
+		40B52D211BC3B2C3009B27E5 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B52D201BC3B2C3009B27E5 /* RoomTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2BF1BC26D5C004562C3 /* BuildingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D5E2BE1BC26D5C004562C3 /* BuildingData.json */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C31BC26FCC004562C3 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C51BC28F31004562C3 /* BuildingPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C41BC28F31004562C3 /* BuildingPin.swift */; settings = {ASSET_TAGS = (); }; };
@@ -29,7 +30,6 @@
 		4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
 		405FC00A1BC0CC8B00E3F206 /* ComputerAvailCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputerAvailCheck-Bridging-Header.h"; sourceTree = "<group>"; };
 		405FC0111BC0D48D00E3F206 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		405FC0191BC0DABB00E3F206 /* SoapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapManager.swift; sourceTree = "<group>"; };
 		405FC01B1BC0FA2D00E3F206 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		407523B71BC0C1740071211D /* ComputerAvailCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerAvailCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407523BA1BC0C1740071211D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +37,8 @@
 		407523C11BC0C1740071211D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		407523C41BC0C1740071211D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		407523C61BC0C1740071211D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B52D1E1BC3B05B009B27E5 /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		40B52D201BC3B2C3009B27E5 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		40D5E2BE1BC26D5C004562C3 /* BuildingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingData.json; sourceTree = "<group>"; };
 		40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		40D5E2C41BC28F31004562C3 /* BuildingPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingPin.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */,
 				40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */,
+				40B52D1E1BC3B05B009B27E5 /* RoomModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -81,6 +84,7 @@
 			children = (
 				4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */,
 				40D5E2C41BC28F31004562C3 /* BuildingPin.swift */,
+				40B52D201BC3B2C3009B27E5 /* RoomTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -92,14 +96,6 @@
 				40D5E2C61BC2CF79004562C3 /* RoomViewController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		405FC0161BC0DA3C00E3F206 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				405FC0191BC0DABB00E3F206 /* SoapManager.swift */,
-			);
-			name = Utility;
 			sourceTree = "<group>";
 		};
 		407523AE1BC0C1740071211D = {
@@ -128,7 +124,6 @@
 				405FC0131BC0D4A800E3F206 /* Model */,
 				405FC0141BC0D4AD00E3F206 /* View */,
 				405FC0151BC0D4C300E3F206 /* Controller */,
-				405FC0161BC0DA3C00E3F206 /* Utility */,
 				407523C11BC0C1740071211D /* Assets.xcassets */,
 				407523C31BC0C1740071211D /* LaunchScreen.storyboard */,
 				40D5E2BE1BC26D5C004562C3 /* BuildingData.json */,
@@ -272,8 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B52D211BC3B2C3009B27E5 /* RoomTableViewCell.swift in Sources */,
+				40B52D1F1BC3B05B009B27E5 /* RoomModel.swift in Sources */,
 				40D5E2C31BC26FCC004562C3 /* BuildingAnnotation.swift in Sources */,
-				405FC01A1BC0DABB00E3F206 /* SoapManager.swift in Sources */,
 				401D924D1BC0FF3100D59FF1 /* BuildingModel.swift in Sources */,
 				405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */,
 				40D5E2C51BC28F31004562C3 /* BuildingPin.swift in Sources */,

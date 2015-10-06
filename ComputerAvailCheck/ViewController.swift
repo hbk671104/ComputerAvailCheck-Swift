@@ -21,7 +21,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	@IBOutlet weak var buildingTableView: UITableView!
     var refreshControl = UIRefreshControl()
     
-	var soapManager = SoapManager()
     var locationManager = CLLocationManager()
 	var buildingModelArray: [BuildingModel] = []
     var buildingPinArray: [BuildingPin] = []
@@ -31,9 +30,9 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		// Delegate
-		self.soapManager.delegate = self
+		SOAPEngine.sharedInstance().delegate = self
 		self.locationManager.delegate = self
-        
+		
         // Add refresh control
         self.refreshControl.tintColor = UIColor.whiteColor()
         self.refreshControl.addTarget(self, action: "loadBuildingData", forControlEvents: UIControlEvents.ValueChanged)
@@ -65,7 +64,7 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		self.buildingModelArray.removeAll()
         self.buildingMapView.removeAnnotations(self.buildingPinArray)
         self.buildingPinArray.removeAll()
-		self.soapManager.requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
+		SOAPEngine.sharedInstance().requestURL(asmxURL, soapAction: buildingSoapAction, value: "UP", forKey: "Campus")
 	}
 	
     func jsonArrayFromFile(filename: String) -> NSArray {
