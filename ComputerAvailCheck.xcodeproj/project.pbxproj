@@ -21,7 +21,7 @@
 		40D5E2C31BC26FCC004562C3 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C51BC28F31004562C3 /* BuildingPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C41BC28F31004562C3 /* BuildingPin.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C71BC2CF79004562C3 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C61BC2CF79004562C3 /* RoomViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -399,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Bokang Huang (UWS6428YWU)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ComputerAvailCheck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -421,7 +421,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Bokang Huang (TCXFX6H5P2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bokang Huang (TCXFX6H5P2)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ComputerAvailCheck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

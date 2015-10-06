@@ -30,7 +30,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
 		
 		// Add refresh control
 		self.refreshControl.tintColor = UIColor.whiteColor()
-		self.refreshControl.addTarget(self, action: Selector("loadRoomData"), forControlEvents: UIControlEvents.ValueChanged)
+		self.refreshControl.addTarget(self, action: "loadRoomData", forControlEvents: UIControlEvents.ValueChanged)
 		self.roomTableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
 		self.roomTableView.addSubview(self.refreshControl)
 		
