@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "iphone",
+      "filename" : "Linux.png",
       "scale" : "1x"
     },
     {
@@ -13,6 +14,16 @@
       "idiom" : "iphone",
       "filename" : "Linux@3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Linux~ipad@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Linux~ipad@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
