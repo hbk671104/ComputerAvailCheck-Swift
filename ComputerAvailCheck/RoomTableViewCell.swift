@@ -19,7 +19,11 @@ class RoomTableViewCell: UITableViewCell {
 	var roomModel: RoomModel! {
 		didSet {
 			roomNumberLabel.text = roomModel.Room
-			roomNameLabel.text = roomModel.RoomType
+			if !roomModel.NickName.isEmpty {
+				roomNameLabel.text = roomModel.NickName
+			} else {
+				roomNameLabel.text = roomModel.RoomType
+			}
 			windowsCountLabel.text = String(roomModel.nWindows)
 			macCountLabel.text = String(roomModel.nMacintosh)
 			linuxCountLabel.text = String(roomModel.nLinux)
