@@ -14,7 +14,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 
 	let asmxURL = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx"
 	let buildingSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Buildings"
-	let roomSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Rooms"
     let initialLocation = CLLocationCoordinate2D(latitude: 40.799870, longitude: -77.863642)
     
     @IBOutlet weak var buildingMapView: MKMapView!
@@ -95,8 +94,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	// MARK: SOAPEngineDelegate
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFinishLoading stringXML: String!, dictionary dict: [NSObject : AnyObject]!) {
-        // End refreshing
-        self.refreshControl.endRefreshing()
 		let responseDict = dict as Dictionary
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
@@ -134,11 +131,12 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 				}
 			}
 		}
+		self.refreshControl.endRefreshing()
 	}
 	
     func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-        self.refreshControl.endRefreshing()
         SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+		self.refreshControl.endRefreshing()
     }
     
 	// MARK: UITableViewDataSource
@@ -156,10 +154,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	}
     
     // MARK: UITableViewDelegate
-	
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("buildingSectionHeader") as UITableViewCell!

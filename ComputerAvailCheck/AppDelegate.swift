@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // HUD Init
         SVProgressHUD.setForegroundColor(UIColor(red: 32/255.0, green: 65/255.0, blue: 123/255.0, alpha: 1.0))
-        SVProgressHUD.setBackgroundColor(UIColor(white: 1, alpha: 0.9))
+        SVProgressHUD.setBackgroundColor(UIColor(white: 1, alpha: 1.0))
+		SVProgressHUD.setRingThickness(7.0)
 		
 		// SOAP Engine Init
 		SOAPEngine.sharedInstance().version = VERSION_1_2

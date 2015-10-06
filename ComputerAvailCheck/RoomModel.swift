@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import EVReflection
 
-class RoomModel: NSObject {
+class RoomModel: EVObject {
 	var Room: String = ""
 	var RoomType: String = ""
 	var nComputers: Int = 0
