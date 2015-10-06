@@ -10,11 +10,14 @@ import UIKit
 
 class RoomViewController: UIViewController {
 
+	var oppCode: String = ""
+	var buildingName: String = ""
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "FUCK"
+        self.title = buildingName
     }
 
     override func viewWillAppear(animated: Bool) {

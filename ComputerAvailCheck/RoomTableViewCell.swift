@@ -16,16 +16,15 @@ class RoomTableViewCell: UITableViewCell {
 	@IBOutlet weak var macCountLabel: UILabel!
 	@IBOutlet weak var linuxCountLabel: UILabel!
 	
-	/*
 	var roomModel: RoomModel! {
 		didSet {
 			roomNumberLabel.text = roomModel.Room
-			if let nickname = roomModel.NickName {
-				roomNameLabel.text = nickname
-			}
+			roomNameLabel.text = roomModel.RoomType
+			windowsCountLabel.text = String(roomModel.nWindows)
+			macCountLabel.text = String(roomModel.nMacintosh)
+			linuxCountLabel.text = String(roomModel.nLinux)
 		}
 	}
-	*/
 	
     override func awakeFromNib() {
         super.awakeFromNib()

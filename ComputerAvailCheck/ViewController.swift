@@ -52,7 +52,15 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
     }
-    
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		// Get the new view controller using 
+		let roomViewController = segue.destinationViewController as! RoomViewController
+		let buildingModel = sender as! BuildingModel
+		roomViewController.oppCode = buildingModel.OppCode
+		roomViewController.buildingName = buildingModel.Building
+	}
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -160,7 +168,7 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("roomPush", sender: nil)
+        self.performSegueWithIdentifier("roomPush", sender: self.buildingModelArray[indexPath.row])
     }
     
     // MARK: MKMapViewDelegate
@@ -201,7 +209,9 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        self.performSegueWithIdentifier("roomPush", sender: nil)
+		let pin = view.annotation as! BuildingPin
+		let index = self.buildingPinArray.indexOf(pin)
+        self.performSegueWithIdentifier("roomPush", sender: self.buildingModelArray[index!])
     }
     
     // MARK: CLLocationManagerDelegate
