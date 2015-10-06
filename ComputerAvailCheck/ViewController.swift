@@ -29,7 +29,6 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		// Delegate
-		SOAPEngine.sharedInstance().delegate = self
 		self.locationManager.delegate = self
 		
         // Add refresh control
@@ -45,6 +44,11 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		// Make a request
 		self.refreshControl.beginRefreshing()
         self.loadBuildingData()
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		SOAPEngine.sharedInstance().delegate = self
 	}
 
     override func viewDidAppear(animated: Bool) {

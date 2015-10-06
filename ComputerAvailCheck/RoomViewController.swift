@@ -26,10 +26,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = buildingName
-		
-		// Delegate
-		SOAPEngine.sharedInstance().delegate = self
+        self.title = self.buildingName
 		
 		// Add refresh control
 		self.refreshControl.tintColor = UIColor.whiteColor()
@@ -45,6 +42,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+		SOAPEngine.sharedInstance().delegate = self
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -60,6 +58,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
 	// MARK: Instance Method
 	func loadRoomData() {
 		self.roomModelArray.removeAll()
+		SOAPEngine.sharedInstance().clearValues()
 		SOAPEngine.sharedInstance().requestURL(asmxURL, soapAction: roomSoapAction, value: self.oppCode, forKey: "OppCode")
 	}
 	
@@ -70,14 +69,18 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
 		// Optional Chaining
 		if let diffgram = responseDict["diffgram"] {
 			if let documentElement = (diffgram as! NSDictionary)["DocumentElement"] {
-				if let rooms: NSArray = ((documentElement as! NSDictionary)["Rooms"] as! NSArray) {
-					for dict in rooms {
+				let rooms = (documentElement as! NSDictionary)["Rooms"]
+				if rooms is NSArray {
+					for dict in rooms as! NSArray {
 						let roomModel = RoomModel(dictionary: dict as! NSDictionary)
 						self.roomModelArray.append(roomModel)
 					}
-					// Refresh tableview
-					self.roomTableView.reloadData()
+				} else {
+					let roomModel = RoomModel(dictionary: rooms as! NSDictionary)
+					self.roomModelArray.append(roomModel)
 				}
+				// Refresh tableview
+				self.roomTableView.reloadData()
 			}
 		}
 		self.refreshControl.endRefreshing()
