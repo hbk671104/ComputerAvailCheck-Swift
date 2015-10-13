@@ -21,7 +21,7 @@
 		40D5E2C31BC26FCC004562C3 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C51BC28F31004562C3 /* BuildingPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C41BC28F31004562C3 /* BuildingPin.swift */; settings = {ASSET_TAGS = (); }; };
 		40D5E2C71BC2CF79004562C3 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D5E2C61BC2CF79004562C3 /* RoomViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
