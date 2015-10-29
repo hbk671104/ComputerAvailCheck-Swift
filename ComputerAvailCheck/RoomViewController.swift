@@ -45,7 +45,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 		SOAPEngine.sharedInstance().delegate = self
         if let navigationController = self.navigationController as? ScrollingNavigationController {
-            navigationController.followScrollView(self.roomTableView, delay: 50.0)
+            navigationController.followScrollView(self.roomTableView)
         }
     }
     
