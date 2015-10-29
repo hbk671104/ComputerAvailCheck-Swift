@@ -407,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="2400" y="488.02816901408448"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Scrolling Navigation Controller-->
         <scene sceneID="hC4-Tb-gC7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GZ6-6C-sFh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GZ6-6C-sFh" customClass="ScrollingNavigationController" customModule="AMScrollingNavbar" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="6gO-i2-ngz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

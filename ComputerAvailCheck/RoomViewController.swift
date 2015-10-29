@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import AMScrollingNavbar
 
 class RoomViewController: UIViewController, SOAPEngineDelegate {
 
@@ -43,11 +44,17 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 		SOAPEngine.sharedInstance().delegate = self
+        if let navigationController = self.navigationController as? ScrollingNavigationController {
+            navigationController.followScrollView(self.roomTableView, delay: 50.0)
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        if let navigationController = self.navigationController as? ScrollingNavigationController {
+            navigationController.stopFollowingScrollView()
+        }
     }
     
     override func didReceiveMemoryWarning() {
