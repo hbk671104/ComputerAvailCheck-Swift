@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 import AMScrollingNavbar
 
 class RoomViewController: UIViewController, SOAPEngineDelegate {
@@ -99,8 +98,12 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
 	}
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-		SVProgressHUD.showErrorWithStatus(error.localizedDescription)
-		self.refreshControl.endRefreshing()
+        let alertViewController = UIAlertController(title: "Network Error", message: error.localizedDescription, preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Okay", style: .Cancel, handler: nil)
+        alertViewController.addAction(alertAction)
+        self.presentViewController(alertViewController, animated: true) { () -> Void in
+            self.refreshControl.endRefreshing()
+        };
 	}
 	
 	// MARK: UITableViewDataSource
