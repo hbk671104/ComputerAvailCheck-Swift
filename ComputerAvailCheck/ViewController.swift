@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import SVProgressHUD
 
 class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
 
@@ -143,10 +142,14 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	}
 	
     func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-        SVProgressHUD.showErrorWithStatus(error.localizedDescription)
-		self.refreshControl.endRefreshing()
+        let alertViewController = UIAlertController(title: "Network Error", message: error.localizedDescription, preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Okay", style: .Cancel, handler: nil)
+        alertViewController.addAction(alertAction)
+        self.presentViewController(alertViewController, animated: true) { () -> Void in
+            self.refreshControl.endRefreshing()
+        };
     }
-    
+
 	// MARK: UITableViewDataSource
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
