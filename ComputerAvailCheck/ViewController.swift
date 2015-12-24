@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Whisper
 
 class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
 
@@ -142,12 +143,9 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	}
 	
     func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-        let alertViewController = UIAlertController(title: "Network Error", message: error.localizedDescription, preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "Okay", style: .Cancel, handler: nil)
-        alertViewController.addAction(alertAction)
-        self.presentViewController(alertViewController, animated: true) { () -> Void in
-            self.refreshControl.endRefreshing()
-        };
+        let message = Murmur(title: error.localizedDescription)
+        Whistle(message)
+        self.refreshControl.endRefreshing()
     }
 
 	// MARK: UITableViewDataSource
