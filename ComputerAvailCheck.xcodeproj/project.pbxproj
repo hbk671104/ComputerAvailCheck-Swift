@@ -11,6 +11,13 @@
 		40344E541BC15AED002F33B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405FC01B1BC0FA2D00E3F206 /* MapKit.framework */; };
 		4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */; };
 		405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0111BC0D48D00E3F206 /* ViewController.swift */; };
+		40619D731C3816BC002478FF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40619D711C3816BC002478FF /* Interface.storyboard */; };
+		40619D751C3816BC002478FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40619D741C3816BC002478FF /* Assets.xcassets */; };
+		40619D7C1C3816BC002478FF /* WatchCheck Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40619D7B1C3816BC002478FF /* WatchCheck Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40619D811C3816BC002478FF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40619D801C3816BC002478FF /* InterfaceController.swift */; };
+		40619D831C3816BC002478FF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40619D821C3816BC002478FF /* ExtensionDelegate.swift */; };
+		40619D851C3816BC002478FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40619D841C3816BC002478FF /* Assets.xcassets */; };
+		40619D891C3816BC002478FF /* WatchCheck.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 40619D6F1C3816BB002478FF /* WatchCheck.app */; };
 		407523BB1BC0C1740071211D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407523BA1BC0C1740071211D /* AppDelegate.swift */; };
 		407523C01BC0C1740071211D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407523BE1BC0C1740071211D /* Main.storyboard */; };
 		407523C21BC0C1740071211D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407523C11BC0C1740071211D /* Assets.xcassets */; };
@@ -24,6 +31,48 @@
 		807FC868B8274EBA41E657BF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1A52721A8396B292102E0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		40619D7D1C3816BC002478FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407523AF1BC0C1740071211D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40619D7A1C3816BC002478FF;
+			remoteInfo = "WatchCheck Extension";
+		};
+		40619D871C3816BC002478FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407523AF1BC0C1740071211D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40619D6E1C3816BB002478FF;
+			remoteInfo = WatchCheck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40619D8F1C3816BC002478FF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				40619D7C1C3816BC002478FF /* WatchCheck Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40619D911C3816BC002478FF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				40619D891C3816BC002478FF /* WatchCheck.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B118E266CF6DFC6B3B6440A /* Pods_ComputerAvailCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComputerAvailCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D70D6691C9288952B2E580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +82,16 @@
 		405FC00A1BC0CC8B00E3F206 /* ComputerAvailCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputerAvailCheck-Bridging-Header.h"; sourceTree = "<group>"; };
 		405FC0111BC0D48D00E3F206 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		405FC01B1BC0FA2D00E3F206 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		40619D6F1C3816BB002478FF /* WatchCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40619D721C3816BC002478FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		40619D741C3816BC002478FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40619D761C3816BC002478FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40619D7B1C3816BC002478FF /* WatchCheck Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchCheck Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40619D801C3816BC002478FF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		40619D821C3816BC002478FF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		40619D841C3816BC002478FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40619D861C3816BC002478FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40619D921C3824F8002478FF /* ComputerAvailCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ComputerAvailCheck.entitlements; sourceTree = "<group>"; };
 		407523B71BC0C1740071211D /* ComputerAvailCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerAvailCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407523BA1BC0C1740071211D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407523BF1BC0C1740071211D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +100,7 @@
 		407523C61BC0C1740071211D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B52D1E1BC3B05B009B27E5 /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		40B52D201BC3B2C3009B27E5 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		40CA7C211C3828CF0065FFDF /* WatchCheck Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchCheck Extension.entitlements"; sourceTree = "<group>"; };
 		40D5E2BE1BC26D5C004562C3 /* BuildingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingData.json; sourceTree = "<group>"; };
 		40D5E2C21BC26FCC004562C3 /* BuildingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		40D5E2C41BC28F31004562C3 /* BuildingPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingPin.swift; sourceTree = "<group>"; };
@@ -50,6 +110,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		40619D781C3816BC002478FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407523B41BC0C1740071211D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,10 +167,34 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		40619D701C3816BB002478FF /* WatchCheck */ = {
+			isa = PBXGroup;
+			children = (
+				40619D711C3816BC002478FF /* Interface.storyboard */,
+				40619D741C3816BC002478FF /* Assets.xcassets */,
+				40619D761C3816BC002478FF /* Info.plist */,
+			);
+			path = WatchCheck;
+			sourceTree = "<group>";
+		};
+		40619D7F1C3816BC002478FF /* WatchCheck Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40CA7C211C3828CF0065FFDF /* WatchCheck Extension.entitlements */,
+				40619D801C3816BC002478FF /* InterfaceController.swift */,
+				40619D821C3816BC002478FF /* ExtensionDelegate.swift */,
+				40619D841C3816BC002478FF /* Assets.xcassets */,
+				40619D861C3816BC002478FF /* Info.plist */,
+			);
+			path = "WatchCheck Extension";
+			sourceTree = "<group>";
+		};
 		407523AE1BC0C1740071211D = {
 			isa = PBXGroup;
 			children = (
 				407523B91BC0C1740071211D /* ComputerAvailCheck */,
+				40619D701C3816BB002478FF /* WatchCheck */,
+				40619D7F1C3816BC002478FF /* WatchCheck Extension */,
 				407523B81BC0C1740071211D /* Products */,
 				0C4BC4B658C1A204A12CEFDF /* Pods */,
 				E90D08A71CB9453AE828DE5E /* Frameworks */,
@@ -114,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				407523B71BC0C1740071211D /* ComputerAvailCheck.app */,
+				40619D6F1C3816BB002478FF /* WatchCheck.app */,
+				40619D7B1C3816BC002478FF /* WatchCheck Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +214,7 @@
 		407523B91BC0C1740071211D /* ComputerAvailCheck */ = {
 			isa = PBXGroup;
 			children = (
+				40619D921C3824F8002478FF /* ComputerAvailCheck.entitlements */,
 				407523BA1BC0C1740071211D /* AppDelegate.swift */,
 				407523BE1BC0C1740071211D /* Main.storyboard */,
 				405FC0131BC0D4A800E3F206 /* Model */,
@@ -149,6 +243,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		40619D6E1C3816BB002478FF /* WatchCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40619D901C3816BC002478FF /* Build configuration list for PBXNativeTarget "WatchCheck" */;
+			buildPhases = (
+				40619D6D1C3816BB002478FF /* Resources */,
+				40619D8F1C3816BC002478FF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40619D7E1C3816BC002478FF /* PBXTargetDependency */,
+			);
+			name = WatchCheck;
+			productName = WatchCheck;
+			productReference = 40619D6F1C3816BB002478FF /* WatchCheck.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		40619D7A1C3816BC002478FF /* WatchCheck Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40619D8E1C3816BC002478FF /* Build configuration list for PBXNativeTarget "WatchCheck Extension" */;
+			buildPhases = (
+				40619D771C3816BC002478FF /* Sources */,
+				40619D781C3816BC002478FF /* Frameworks */,
+				40619D791C3816BC002478FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchCheck Extension";
+			productName = "WatchCheck Extension";
+			productReference = 40619D7B1C3816BC002478FF /* WatchCheck Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		407523B61BC0C1740071211D /* ComputerAvailCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 407523C91BC0C1740071211D /* Build configuration list for PBXNativeTarget "ComputerAvailCheck" */;
@@ -159,10 +287,12 @@
 				407523B51BC0C1740071211D /* Resources */,
 				0F90E0A51EA07FA7683558C2 /* Copy Pods Resources */,
 				A91525A2587CCF07C33C0BC4 /* Embed Pods Frameworks */,
+				40619D911C3816BC002478FF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				40619D881C3816BC002478FF /* PBXTargetDependency */,
 			);
 			name = ComputerAvailCheck;
 			productName = ComputerAvailCheck;
@@ -176,13 +306,31 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bokang Huang";
 				TargetAttributes = {
+					40619D6E1C3816BB002478FF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TCXFX6H5P2;
+					};
+					40619D7A1C3816BC002478FF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TCXFX6H5P2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					407523B61BC0C1740071211D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = TCXFX6H5P2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -200,11 +348,30 @@
 			projectRoot = "";
 			targets = (
 				407523B61BC0C1740071211D /* ComputerAvailCheck */,
+				40619D6E1C3816BB002478FF /* WatchCheck */,
+				40619D7A1C3816BC002478FF /* WatchCheck Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		40619D6D1C3816BB002478FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40619D751C3816BC002478FF /* Assets.xcassets in Resources */,
+				40619D731C3816BC002478FF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40619D791C3816BC002478FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40619D851C3816BC002478FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407523B51BC0C1740071211D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +434,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		40619D771C3816BC002478FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40619D831C3816BC002478FF /* ExtensionDelegate.swift in Sources */,
+				40619D811C3816BC002478FF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407523B31BC0C1740071211D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,7 +461,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		40619D7E1C3816BC002478FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40619D7A1C3816BC002478FF /* WatchCheck Extension */;
+			targetProxy = 40619D7D1C3816BC002478FF /* PBXContainerItemProxy */;
+		};
+		40619D881C3816BC002478FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40619D6E1C3816BB002478FF /* WatchCheck */;
+			targetProxy = 40619D871C3816BC002478FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		40619D711C3816BC002478FF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40619D721C3816BC002478FF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		407523BE1BC0C1740071211D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -305,6 +502,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		40619D8A1C3816BC002478FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bokang Huang (UWS6428YWU)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = WatchCheck_Extension;
+				INFOPLIST_FILE = WatchCheck/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.ComputerAvailCheck.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		40619D8B1C3816BC002478FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bokang Huang (TCXFX6H5P2)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = WatchCheck_Extension;
+				INFOPLIST_FILE = WatchCheck/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.ComputerAvailCheck.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		40619D8C1C3816BC002478FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchCheck Extension/WatchCheck Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bokang Huang (UWS6428YWU)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WatchCheck Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.ComputerAvailCheck.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		40619D8D1C3816BC002478FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchCheck Extension/WatchCheck Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bokang Huang (TCXFX6H5P2)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WatchCheck Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.ComputerAvailCheck.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		407523C71BC0C1740071211D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,8 +669,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ComputerAvailCheck/ComputerAvailCheck.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bokang Huang (UWS6428YWU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ComputerAvailCheck/Info.plist;
@@ -420,8 +692,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ComputerAvailCheck/ComputerAvailCheck.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bokang Huang (TCXFX6H5P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ComputerAvailCheck/Info.plist;
@@ -438,6 +711,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		40619D8E1C3816BC002478FF /* Build configuration list for PBXNativeTarget "WatchCheck Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40619D8C1C3816BC002478FF /* Debug */,
+				40619D8D1C3816BC002478FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40619D901C3816BC002478FF /* Build configuration list for PBXNativeTarget "WatchCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40619D8A1C3816BC002478FF /* Debug */,
+				40619D8B1C3816BC002478FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		407523B21BC0C1740071211D /* Build configuration list for PBXProject "ComputerAvailCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

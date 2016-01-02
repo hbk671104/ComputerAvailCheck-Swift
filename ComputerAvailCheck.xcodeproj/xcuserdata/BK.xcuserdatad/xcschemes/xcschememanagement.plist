@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WatchCheck.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>40619D6E1C3816BB002478FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>407523B61BC0C1740071211D</key>
 		<dict>
 			<key>primary</key>
