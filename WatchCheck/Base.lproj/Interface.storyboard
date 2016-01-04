@@ -8,27 +8,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCheck" customModuleProvider="target">
-                    <items>
-                        <table alignment="left" id="nBb-fv-zDB">
-                            <items>
-                                <tableRow id="zD1-en-RMd">
-                                    <group key="rootItem" width="1" alignment="left" id="UCl-rX-xrV">
-                                        <items>
-                                            <label width="64.5" height="42.5" alignment="left" text="Building" textAlignment="left" id="PEI-h7-nqY">
-                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                            </label>
-                                            <label width="60.5" height="51.5" alignment="left" text="100" textAlignment="right" id="BsV-8w-1JZ">
-                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                            </label>
-                                        </items>
-                                    </group>
-                                </tableRow>
-                            </items>
-                            <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                        </table>
-                    </items>
-                </controller>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCheck" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="316" y="443"/>
         </scene>
