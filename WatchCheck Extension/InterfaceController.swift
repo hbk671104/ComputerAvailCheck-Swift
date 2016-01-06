@@ -12,6 +12,11 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var totalLabel: WKInterfaceLabel!
+    @IBOutlet var windowLabel: WKInterfaceLabel!
+    @IBOutlet var macLabel: WKInterfaceLabel!
+    @IBOutlet var linuxLabel: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

@@ -5,12 +5,65 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Summary-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCheck" customModuleProvider="target"/>
+                <controller identifier="MainInterface" title="Summary" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCheck" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.5" alignment="left" layout="vertical" id="pPu-jB-UWZ">
+                            <items>
+                                <label alignment="center" text="Total" textAlignment="center" id="IMi-g4-M11">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="388" textAlignment="center" id="drt-SF-TfJ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <group width="1" height="0.5" alignment="left" id="ye6-bi-YgM">
+                            <items>
+                                <group width="0.33000000000000002" height="1" alignment="left" layout="vertical" id="RyL-gd-50r">
+                                    <items>
+                                        <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="38" textAlignment="center" id="dWy-H9-YrH"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="YMS-df-eDA">
+                                    <items>
+                                        <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="53" textAlignment="center" id="yoE-J2-CaZ"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="right" layout="vertical" id="vfn-G0-HKx">
+                                    <items>
+                                        <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="10" textAlignment="center" id="PqH-aL-Dia"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="linuxLabel" destination="PqH-aL-Dia" id="OwC-XF-2DJ"/>
+                        <outlet property="macLabel" destination="yoE-J2-CaZ" id="c4E-Qm-2iq"/>
+                        <outlet property="totalLabel" destination="drt-SF-TfJ" id="fLY-Tw-DR9"/>
+                        <outlet property="windowLabel" destination="dWy-H9-YrH" id="OPf-7X-081"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="316" y="443"/>
+            <point key="canvasLocation" x="516" y="432"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
