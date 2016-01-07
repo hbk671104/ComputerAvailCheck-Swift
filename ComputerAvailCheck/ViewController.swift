@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 import Whisper
+import WatchConnectivity
 
-class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate, WCSessionDelegate {
 
 	let asmxURL = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx"
 	let buildingSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Buildings"
@@ -28,9 +29,17 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		// Delegate
+		// Location manage delegate
 		self.locationManager.delegate = self
-		
+		// Watch connectivity init
+        if WCSession.isSupported() {
+            let session = WCSession.defaultSession()
+            if session.watchAppInstalled {
+                session.delegate = self
+                session.activateSession()
+            }
+        }
+        
         // Add refresh control
         self.refreshControl.tintColor = UIColor.whiteColor()
         self.refreshControl.addTarget(self, action: "loadBuildingData", forControlEvents: UIControlEvents.ValueChanged)
@@ -136,6 +145,12 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
                     self.buildingTableView.reloadData()
                     // Add annotations
                     self.buildingMapView.addAnnotations(self.buildingPinArray)
+                    // Update apple watch data
+                    do {
+                        try WCSession.defaultSession().updateApplicationContext(["data": self.buildingModelArray])
+                    } catch let error {
+                        print(error)
+                    }
 				}
 			}
 		}
