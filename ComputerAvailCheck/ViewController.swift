@@ -195,9 +195,9 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
             let index = self.buildingPinArray.indexOf(annotation)
             let buildingModel = self.buildingModelArray[index!]
             if buildingModel.nAvailable < buildingModel.nComputers / 2 {
-                view.pinColor = .Red
+                view.pinTintColor = UIColor.redColor()
             } else {
-                view.pinColor = .Green
+                view.pinTintColor = UIColor.greenColor()
             }
             return view
         }

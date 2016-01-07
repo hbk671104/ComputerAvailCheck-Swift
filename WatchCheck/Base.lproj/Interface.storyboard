@@ -28,7 +28,9 @@
                                         <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="38" textAlignment="center" id="dWy-H9-YrH"/>
+                                        <label alignment="center" verticalAlignment="center" text="38" textAlignment="center" id="dWy-H9-YrH">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
                                 </group>
@@ -37,7 +39,9 @@
                                         <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="53" textAlignment="center" id="yoE-J2-CaZ"/>
+                                        <label alignment="center" verticalAlignment="center" text="53" textAlignment="center" id="yoE-J2-CaZ">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
                                 </group>
@@ -46,7 +50,9 @@
                                         <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="10" textAlignment="center" id="PqH-aL-Dia"/>
+                                        <label alignment="center" verticalAlignment="center" text="10" textAlignment="center" id="PqH-aL-Dia">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
                                 </group>
@@ -62,7 +68,34 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="516" y="432"/>
+            <point key="canvasLocation" x="373" y="504"/>
+        </scene>
+        <!--BuildingDetail-->
+        <scene sceneID="8QX-M2-DjM">
+            <objects>
+                <controller identifier="BuildingDetail" id="JIr-3c-5wu">
+                    <items>
+                        <table alignment="left" id="5yA-RR-i9l">
+                            <items>
+                                <tableRow identifier="BuildingRow" id="eBR-Qp-4hp">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="YLl-MX-07X">
+                                        <items>
+                                            <label alignment="center" text="West Pattee" textAlignment="center" id="AbD-1J-qQ9">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text="18" textAlignment="center" id="W6L-66-kvs">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="622" y="504"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

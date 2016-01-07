@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+    
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		// SOAP Engine Init
+		// SOAP Engine init
 		SOAPEngine.sharedInstance().version = VERSION_1_2
 		SOAPEngine.sharedInstance().licenseKey = "i4P459CjYnQ2MV09N4/4V/KbVsU4iiLBG9BOvDWAq0HNFTcJGvD1wmGNzHtI6XA6H+x8shUCOcRlrsaJ+3L0bQ=="
+        // Watch Connectivity init
+        if WCSession.isSupported() {
+            WCSession.defaultSession().delegate = self
+            WCSession.defaultSession().activateSession()
+        }
 		return true
 	}
 
@@ -45,6 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-
 }
+
+extension AppDelegate: WCSessionDelegate {
+    
+    // MARK: WCSessionDelegate
+    internal func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        if let data = message["data"] as? String {
+            replyHandler(["data": data])
+        }
+    }
+    
+}
+
 

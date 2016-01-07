@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 
@@ -16,11 +16,25 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var windowLabel: WKInterfaceLabel!
     @IBOutlet var macLabel: WKInterfaceLabel!
     @IBOutlet var linuxLabel: WKInterfaceLabel!
+    var connectivitySession:WCSession? {
+        didSet {
+            if let session = connectivitySession {
+                session.delegate = self
+                session.activateSession()
+            }
+        }
+    }
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        connectivitySession = WCSession.defaultSession()
+        connectivitySession?.sendMessage(["data": "haha"], replyHandler: { (response) -> Void in
+            print(response["data"])
+            }, errorHandler: { (error) -> Void in
+                print(error)
+        })
     }
 
     override func willActivate() {
@@ -33,4 +47,13 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+
+extension InterfaceController: WCSessionDelegate {
+    
+    // MARK: WCSessionDelegate
+    internal func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        
+    }
+    
 }
