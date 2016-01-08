@@ -30,8 +30,11 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         connectivitySession = WCSession.defaultSession()
+        // Request latest data
         connectivitySession?.sendMessage(["data": "haha"], replyHandler: { (response) -> Void in
-            print(response["data"])
+            if let data = response["data"] as? NSArray {
+                print(data)
+            }
             }, errorHandler: { (error) -> Void in
                 print(error)
         })
