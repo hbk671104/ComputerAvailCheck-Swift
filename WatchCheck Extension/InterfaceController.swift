@@ -16,13 +16,25 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var windowLabel: WKInterfaceLabel!
     @IBOutlet var macLabel: WKInterfaceLabel!
     @IBOutlet var linuxLabel: WKInterfaceLabel!
-
+    var connectivitySession:WCSession? {
+        didSet {
+            if let session = connectivitySession {
+                session.delegate = self
+                session.activateSession()
+            }
+        }
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        WCSession.defaultSession().delegate = self
-        WCSession.defaultSession().activateSession()
+        connectivitySession = WCSession.defaultSession()
+        connectivitySession?.sendMessage(["data": "haha"], replyHandler: { (response) -> Void in
+            print(response["data"])
+            }, errorHandler: { (error) -> Void in
+                print(error)
+        })
     }
 
     override func willActivate() {
@@ -40,8 +52,8 @@ class InterfaceController: WKInterfaceController {
 extension InterfaceController: WCSessionDelegate {
     
     // MARK: WCSessionDelegate
-    internal func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
-        print(applicationContext["data"])
+    internal func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        
     }
     
 }

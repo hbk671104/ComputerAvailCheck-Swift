@@ -9,9 +9,8 @@
 import UIKit
 import MapKit
 import Whisper
-import WatchConnectivity
 
-class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate, WCSessionDelegate {
+class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
 
 	let asmxURL = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx"
 	let buildingSoapAction = "https://clc.its.psu.edu/ComputerAvailabilityWS/Service.asmx/Buildings"
@@ -29,17 +28,9 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		// Location manage delegate
+		// Location manager delegate
 		self.locationManager.delegate = self
-		// Watch connectivity init
-        if WCSession.isSupported() {
-            let session = WCSession.defaultSession()
-            if session.watchAppInstalled {
-                session.delegate = self
-                session.activateSession()
-            }
-        }
-        
+		
         // Add refresh control
         self.refreshControl.tintColor = UIColor.whiteColor()
         self.refreshControl.addTarget(self, action: "loadBuildingData", forControlEvents: UIControlEvents.ValueChanged)
@@ -124,12 +115,14 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
                         buildingNameArray.addObject(dict["name"] as! NSString)
                     }
                     
+                    var buildingDictArray: [NSDictionary] = []
                     for dict in buildings {
                         let buildingModel = BuildingModel(dictionary: dict as! NSDictionary)
                         // Add available building
                         if buildingNameArray.containsObject(buildingModel.Building) {
                             // Building model
                             self.buildingModelArray.append(buildingModel)
+                            buildingDictArray.append(buildingModel.toDictionary())
                             
                             // Building pin
                             let index = buildingNameArray.indexOfObject(buildingModel.Building)
@@ -145,12 +138,10 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
                     self.buildingTableView.reloadData()
                     // Add annotations
                     self.buildingMapView.addAnnotations(self.buildingPinArray)
-                    // Update apple watch data
-                    do {
-                        try WCSession.defaultSession().updateApplicationContext(["data": self.buildingModelArray])
-                    } catch let error {
-                        print(error)
-                    }
+                    // Update user default
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    userDefaults.setObject(buildingDictArray, forKey: "buildings")
+                    userDefaults.synchronize()
 				}
 			}
 		}
