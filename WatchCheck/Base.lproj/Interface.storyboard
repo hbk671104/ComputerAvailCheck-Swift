@@ -12,10 +12,10 @@
                     <items>
                         <group width="1" height="0.5" alignment="left" layout="vertical" id="pPu-jB-UWZ">
                             <items>
-                                <label alignment="center" text="Total" textAlignment="center" id="IMi-g4-M11">
+                                <label alignment="center" text="Total Available" textAlignment="center" id="IMi-g4-M11">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                 </label>
-                                <label alignment="center" verticalAlignment="bottom" text="388" textAlignment="center" id="drt-SF-TfJ">
+                                <label alignment="center" verticalAlignment="bottom" text="N/A" textAlignment="center" id="drt-SF-TfJ">
                                     <fontDescription key="font" type="boldSystem" pointSize="40"/>
                                 </label>
                             </items>
@@ -28,7 +28,7 @@
                                         <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="38" textAlignment="center" id="dWy-H9-YrH">
+                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="dWy-H9-YrH">
                                             <fontDescription key="font" type="system" pointSize="16"/>
                                         </label>
                                     </items>
@@ -39,7 +39,7 @@
                                         <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="53" textAlignment="center" id="yoE-J2-CaZ">
+                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="yoE-J2-CaZ">
                                             <fontDescription key="font" type="system" pointSize="16"/>
                                         </label>
                                     </items>
@@ -50,7 +50,7 @@
                                         <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                         </label>
-                                        <label alignment="center" verticalAlignment="center" text="10" textAlignment="center" id="PqH-aL-Dia">
+                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="PqH-aL-Dia">
                                             <fontDescription key="font" type="system" pointSize="16"/>
                                         </label>
                                     </items>
