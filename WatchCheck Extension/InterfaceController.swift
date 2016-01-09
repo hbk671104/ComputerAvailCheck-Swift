@@ -76,6 +76,13 @@ class InterfaceController: WKInterfaceController {
 		})
 	}
 	
+	override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
+		if segueIdentifier == "buildingPush" {
+			return self.buildingModels
+		}
+		return nil
+	}
+	
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -85,7 +92,6 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }
 
 extension InterfaceController: WCSessionDelegate {

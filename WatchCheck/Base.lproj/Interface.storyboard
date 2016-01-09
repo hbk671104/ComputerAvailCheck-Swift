@@ -10,92 +10,140 @@
             <objects>
                 <controller identifier="MainInterface" title="Summary" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCheck" customModuleProvider="target">
                     <items>
-                        <group width="1" height="0.5" alignment="left" layout="vertical" id="pPu-jB-UWZ">
-                            <items>
-                                <label alignment="center" text="Total Available" textAlignment="center" id="IMi-g4-M11">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
-                                </label>
-                                <label alignment="center" verticalAlignment="bottom" text="N/A" textAlignment="center" id="drt-SF-TfJ">
-                                    <fontDescription key="font" type="boldSystem" pointSize="40"/>
-                                </label>
-                            </items>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
-                        </group>
-                        <group width="1" height="0.5" alignment="left" id="ye6-bi-YgM">
-                            <items>
-                                <group width="0.33000000000000002" height="1" alignment="left" layout="vertical" id="RyL-gd-50r">
-                                    <items>
-                                        <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
-                                        </label>
-                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="dWy-H9-YrH">
-                                            <fontDescription key="font" type="system" pointSize="16"/>
-                                        </label>
-                                    </items>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
-                                </group>
-                                <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="YMS-df-eDA">
-                                    <items>
-                                        <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
-                                        </label>
-                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="yoE-J2-CaZ">
-                                            <fontDescription key="font" type="system" pointSize="16"/>
-                                        </label>
-                                    </items>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
-                                </group>
-                                <group width="0.33000000000000002" height="1" alignment="right" layout="vertical" id="vfn-G0-HKx">
-                                    <items>
-                                        <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
-                                        </label>
-                                        <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="PqH-aL-Dia">
-                                            <fontDescription key="font" type="system" pointSize="16"/>
-                                        </label>
-                                    </items>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
-                                </group>
-                            </items>
-                        </group>
+                        <button alignment="center" id="1BR-X7-9uA">
+                            <group key="contentGroup" width="1" height="1" alignment="left" layout="vertical" id="Rcj-rR-eaV">
+                                <items>
+                                    <group width="1" height="0.5" alignment="left" layout="vertical" id="pPu-jB-UWZ">
+                                        <items>
+                                            <label alignment="center" text="Total Available" textAlignment="center" id="IMi-g4-M11">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="bottom" text="N/A" textAlignment="center" id="drt-SF-TfJ">
+                                                <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
+                                    </group>
+                                    <group width="1" height="0.5" alignment="left" id="ye6-bi-YgM">
+                                        <items>
+                                            <group width="0.33000000000000002" height="1" alignment="left" layout="vertical" id="RyL-gd-50r">
+                                                <items>
+                                                    <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="dWy-H9-YrH">
+                                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="YMS-df-eDA">
+                                                <items>
+                                                    <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="yoE-J2-CaZ">
+                                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="0.33000000000000002" height="1" alignment="right" layout="vertical" id="vfn-G0-HKx">
+                                                <items>
+                                                    <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="PqH-aL-Dia">
+                                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                    </group>
+                                </items>
+                            </group>
+                            <connections>
+                                <segue destination="JIr-3c-5wu" kind="push" identifier="buildingPush" id="xMM-DT-kqj"/>
+                            </connections>
+                        </button>
                     </items>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="linuxLabel" destination="PqH-aL-Dia" id="OwC-XF-2DJ"/>
                         <outlet property="macLabel" destination="yoE-J2-CaZ" id="c4E-Qm-2iq"/>
-                        <outlet property="totalLabel" destination="drt-SF-TfJ" id="fLY-Tw-DR9"/>
+                        <outlet property="totalLabel" destination="drt-SF-TfJ" id="Lf2-Hn-6ni"/>
                         <outlet property="windowLabel" destination="dWy-H9-YrH" id="OPf-7X-081"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="373" y="504"/>
+            <point key="canvasLocation" x="373" y="513"/>
         </scene>
-        <!--BuildingDetail-->
+        <!--Building-->
         <scene sceneID="8QX-M2-DjM">
             <objects>
-                <controller identifier="BuildingDetail" id="JIr-3c-5wu">
+                <controller identifier="BuildingInterface" title="Building" id="JIr-3c-5wu" customClass="BuildingInterfaceController" customModule="WatchCheck_Extension">
                     <items>
                         <table alignment="left" id="5yA-RR-i9l">
                             <items>
-                                <tableRow identifier="BuildingRow" id="eBR-Qp-4hp">
+                                <tableRow identifier="BuildingRow" id="eBR-Qp-4hp" customClass="BuildingRow" customModule="WatchCheck_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="YLl-MX-07X">
                                         <items>
                                             <label alignment="center" text="West Pattee" textAlignment="center" id="AbD-1J-qQ9">
                                                 <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                             </label>
-                                            <label alignment="center" verticalAlignment="bottom" text="18" textAlignment="center" id="W6L-66-kvs">
-                                                <fontDescription key="font" type="system" pointSize="16"/>
-                                            </label>
+                                            <group width="1" alignment="center" id="lF8-2m-FlQ">
+                                                <items>
+                                                    <group width="0.33300000000000002" alignment="left" layout="vertical" id="p2D-sA-Nh7">
+                                                        <items>
+                                                            <label alignment="center" text="W" textAlignment="center" id="jnj-Nv-AN0">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                            <label alignment="center" text="N/A" textAlignment="center" id="eNr-Vy-2Jp">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="0.33300000000000002" alignment="left" layout="vertical" id="zpK-l1-b9P">
+                                                        <items>
+                                                            <label alignment="center" text="M" textAlignment="center" id="Nyd-tP-qVN">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                            <label alignment="center" text="N/A" textAlignment="center" id="QIl-0W-X9j">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="0.33300000000000002" alignment="left" layout="vertical" id="GBs-ca-QDj">
+                                                        <items>
+                                                            <label alignment="center" text="L" textAlignment="center" id="L1D-cY-1TE">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                            <label alignment="center" text="N/A" textAlignment="center" id="yhu-1i-Deq">
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="5"/>
+                                            </group>
                                         </items>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
+                                    <connections>
+                                        <outlet property="buildingLabel" destination="AbD-1J-qQ9" id="ntj-bl-wrQ"/>
+                                        <outlet property="linuxLabel" destination="yhu-1i-Deq" id="S1j-2l-cM5"/>
+                                        <outlet property="macLabel" destination="QIl-0W-X9j" id="yKK-Ub-cxV"/>
+                                        <outlet property="winLabel" destination="eNr-Vy-2Jp" id="wPD-2v-Hch"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="buildingTable" destination="5yA-RR-i9l" id="f0j-3q-1Yy"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="622" y="504"/>
+            <point key="canvasLocation" x="603" y="513"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

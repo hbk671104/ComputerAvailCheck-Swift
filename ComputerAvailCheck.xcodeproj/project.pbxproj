@@ -10,6 +10,8 @@
 		401D924D1BC0FF3100D59FF1 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */; };
 		40344E541BC15AED002F33B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405FC01B1BC0FA2D00E3F206 /* MapKit.framework */; };
 		4045B7991BC1205D00D8AE91 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */; };
+		40539C731C412E6300E66F99 /* BuildingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40539C721C412E6300E66F99 /* BuildingInterfaceController.swift */; };
+		40539C751C41314000E66F99 /* BuildingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40539C741C41314000E66F99 /* BuildingRow.swift */; };
 		405FC0121BC0D48D00E3F206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405FC0111BC0D48D00E3F206 /* ViewController.swift */; };
 		40619D731C3816BC002478FF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40619D711C3816BC002478FF /* Interface.storyboard */; };
 		40619D751C3816BC002478FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40619D741C3816BC002478FF /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		401D924C1BC0FF3100D59FF1 /* BuildingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
 		403E8D601BC3D25100340BBB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4045B7981BC1205D00D8AE91 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
+		40539C721C412E6300E66F99 /* BuildingInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingInterfaceController.swift; sourceTree = "<group>"; };
+		40539C741C41314000E66F99 /* BuildingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingRow.swift; sourceTree = "<group>"; };
 		405FC00A1BC0CC8B00E3F206 /* ComputerAvailCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputerAvailCheck-Bridging-Header.h"; sourceTree = "<group>"; };
 		405FC0111BC0D48D00E3F206 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		405FC01B1BC0FA2D00E3F206 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -191,8 +195,10 @@
 		40619D7F1C3816BC002478FF /* WatchCheck Extension */ = {
 			isa = PBXGroup;
 			children = (
-				40619D801C3816BC002478FF /* InterfaceController.swift */,
 				40619D821C3816BC002478FF /* ExtensionDelegate.swift */,
+				40619D801C3816BC002478FF /* InterfaceController.swift */,
+				40539C721C412E6300E66F99 /* BuildingInterfaceController.swift */,
+				40539C741C41314000E66F99 /* BuildingRow.swift */,
 				40619D841C3816BC002478FF /* Assets.xcassets */,
 				40619D861C3816BC002478FF /* Info.plist */,
 			);
@@ -498,7 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				40619D831C3816BC002478FF /* ExtensionDelegate.swift in Sources */,
+				40539C731C412E6300E66F99 /* BuildingInterfaceController.swift in Sources */,
 				40C368BE1C3FBDA4007514AC /* BuildingModel.swift in Sources */,
+				40539C751C41314000E66F99 /* BuildingRow.swift in Sources */,
 				40619D811C3816BC002478FF /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
