@@ -22,10 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		SOAPEngine.sharedInstance().version = VERSION_1_2
 		SOAPEngine.sharedInstance().licenseKey = "i4P459CjYnQ2MV09N4/4V/KbVsU4iiLBG9BOvDWAq0HNFTcJGvD1wmGNzHtI6XA6H+x8shUCOcRlrsaJ+3L0bQ=="
         // Watch Connectivity init
-        if WCSession.isSupported() {
-            WCSession.defaultSession().delegate = self
-            WCSession.defaultSession().activateSession()
-        }
+		WCSession.defaultSession().delegate = self
+		WCSession.defaultSession().activateSession()
+		
 		return true
 	}
 

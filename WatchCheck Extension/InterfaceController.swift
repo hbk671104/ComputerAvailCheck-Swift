@@ -19,20 +19,14 @@ class InterfaceController: WKInterfaceController {
 	@IBOutlet var segueButton: WKInterfaceButton!
 	
 	var buildingModels:[BuildingModel] = []
-    var connectivitySession:WCSession? {
-        didSet {
-            if let session = connectivitySession {
-				session.delegate = self
-                session.activateSession()
-            }
-        }
-    }
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        connectivitySession = WCSession.defaultSession()
+        WCSession.defaultSession().delegate = self
+		WCSession.defaultSession().activateSession()
+		
 		// "Hide" the labels
 		self.totalLabel.setAlpha(0)
 		self.windowLabel.setAlpha(0)
@@ -44,7 +38,7 @@ class InterfaceController: WKInterfaceController {
 		var totalMac = 0
 		var totalLinux = 0
 		// Request latest data from ios
-		connectivitySession?.sendMessage(["data": "haha"], replyHandler: { (response) -> Void in
+		WCSession.defaultSession().sendMessage(["data": "haha"], replyHandler: { (response) -> Void in
 			if let data = response["data"] as? NSArray {
 				// Map to models
 				for dict in data {
