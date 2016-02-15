@@ -37,10 +37,6 @@ class InterfaceController: WKInterfaceController {
 		self.windowLabel.setAlpha(0)
 		self.macLabel.setAlpha(0)
 		self.linuxLabel.setAlpha(0)
-    }
-
-	override func didAppear() {
-		super.didAppear()
 		
 		var totalAvails = 0
 		var totalWin = 0
@@ -74,7 +70,7 @@ class InterfaceController: WKInterfaceController {
 			}, errorHandler: { (error) -> Void in
 				print(error)
 		})
-	}
+    }
 	
 	override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
 		if segueIdentifier == "buildingPush" {

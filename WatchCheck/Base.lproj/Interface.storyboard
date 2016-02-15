@@ -57,7 +57,7 @@
                                                 </items>
                                             </group>
                                         </items>
-                                        <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
                                     </group>
                                 </items>
                             </group>
@@ -75,7 +75,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="373" y="513"/>
+            <point key="canvasLocation" x="475" y="608"/>
         </scene>
         <!--Building-->
         <scene sceneID="8QX-M2-DjM">
@@ -84,7 +84,7 @@
                     <items>
                         <table alignment="left" id="5yA-RR-i9l">
                             <items>
-                                <tableRow identifier="BuildingRow" id="eBR-Qp-4hp" customClass="BuildingRow" customModule="WatchCheck_Extension">
+                                <tableRow identifier="BuildingRow" selectable="NO" id="eBR-Qp-4hp" customClass="BuildingRow" customModule="WatchCheck_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="YLl-MX-07X">
                                         <items>
                                             <label alignment="center" text="West Pattee" textAlignment="center" id="AbD-1J-qQ9">
@@ -143,7 +143,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="513"/>
+            <point key="canvasLocation" x="730" y="608"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
