@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                                             <label alignment="center" text="Total Available" textAlignment="center" id="IMi-g4-M11">
                                                 <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                             </label>
-                                            <label alignment="center" verticalAlignment="bottom" text="N/A" textAlignment="center" id="drt-SF-TfJ">
+                                            <label alignment="center" verticalAlignment="bottom" text="..." textAlignment="center" id="drt-SF-TfJ">
                                                 <fontDescription key="font" type="boldSystem" pointSize="40"/>
                                             </label>
                                         </items>
@@ -31,7 +31,7 @@
                                                     <label alignment="center" text="Win" textAlignment="center" id="fzt-xZ-0Vc">
                                                         <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                                     </label>
-                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="dWy-H9-YrH">
+                                                    <label alignment="center" verticalAlignment="center" text="..." textAlignment="center" id="dWy-H9-YrH">
                                                         <fontDescription key="font" type="system" pointSize="16"/>
                                                     </label>
                                                 </items>
@@ -41,7 +41,7 @@
                                                     <label alignment="center" text="Mac" textAlignment="center" id="Ot0-Kg-lIo">
                                                         <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                                     </label>
-                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="yoE-J2-CaZ">
+                                                    <label alignment="center" verticalAlignment="center" text="..." textAlignment="center" id="yoE-J2-CaZ">
                                                         <fontDescription key="font" type="system" pointSize="16"/>
                                                     </label>
                                                 </items>
@@ -51,7 +51,7 @@
                                                     <label alignment="center" text="Lin" textAlignment="center" id="fax-Nc-oTx">
                                                         <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                                     </label>
-                                                    <label alignment="center" verticalAlignment="center" text="N/A" textAlignment="center" id="PqH-aL-Dia">
+                                                    <label alignment="center" verticalAlignment="center" text="..." textAlignment="center" id="PqH-aL-Dia">
                                                         <fontDescription key="font" type="system" pointSize="16"/>
                                                     </label>
                                                 </items>
@@ -70,6 +70,7 @@
                     <connections>
                         <outlet property="linuxLabel" destination="PqH-aL-Dia" id="OwC-XF-2DJ"/>
                         <outlet property="macLabel" destination="yoE-J2-CaZ" id="c4E-Qm-2iq"/>
+                        <outlet property="segueButton" destination="1BR-X7-9uA" id="pra-Wc-r0s"/>
                         <outlet property="totalLabel" destination="drt-SF-TfJ" id="Lf2-Hn-6ni"/>
                         <outlet property="windowLabel" destination="dWy-H9-YrH" id="OPf-7X-081"/>
                     </connections>

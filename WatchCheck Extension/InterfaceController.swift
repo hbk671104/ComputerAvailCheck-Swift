@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var windowLabel: WKInterfaceLabel!
     @IBOutlet var macLabel: WKInterfaceLabel!
     @IBOutlet var linuxLabel: WKInterfaceLabel!
+	@IBOutlet var segueButton: WKInterfaceButton!
 	
 	var buildingModels:[BuildingModel] = []
     var connectivitySession:WCSession? {
@@ -55,7 +56,6 @@ class InterfaceController: WKInterfaceController {
 					totalLinux += buildingModel.nLinux
 					self.buildingModels.append(buildingModel)
 				}
-				// update labels
 				self.totalLabel.setText("\(totalAvails)")
 				self.windowLabel.setText("\(totalWin)")
 				self.macLabel.setText("\(totalMac)")
@@ -66,9 +66,21 @@ class InterfaceController: WKInterfaceController {
 					self.macLabel.setAlpha(1)
 					self.linuxLabel.setAlpha(1)
 				})
+				self.segueButton.setEnabled(true)
 			}
 			}, errorHandler: { (error) -> Void in
 				print(error)
+				self.totalLabel.setText("N/A")
+				self.windowLabel.setText("N/A")
+				self.macLabel.setText("N/A")
+				self.linuxLabel.setText("N/A")
+				self.animateWithDuration(1.0, animations: { () -> Void in
+					self.totalLabel.setAlpha(1)
+					self.windowLabel.setAlpha(1)
+					self.macLabel.setAlpha(1)
+					self.linuxLabel.setAlpha(1)
+				})
+				self.segueButton.setEnabled(false)
 		})
     }
 	
