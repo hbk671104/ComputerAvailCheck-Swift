@@ -10,7 +10,7 @@ target 'ComputerAvailCheck' do
     platform :ios, '9.0'
     pod 'SOAPEngine', '~> 1.24'
     pod 'AMScrollingNavbar', '~> 2.0'
-    pod 'Whisper', '~> 1.0'
+    pod 'Whisper', '~> 2.0'
 	shared_pods
 end
 

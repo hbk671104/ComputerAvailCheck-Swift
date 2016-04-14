@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		
 		// SOAP Engine init
-		SOAPEngine.sharedInstance().version = VERSION_1_2
+		SOAPEngine.sharedInstance().version = .VERSION_1_2
 		SOAPEngine.sharedInstance().licenseKey = "i4P459CjYnQ2MV09N4/4V/KbVsU4iiLBG9BOvDWAq0HNFTcJGvD1wmGNzHtI6XA6H+x8shUCOcRlrsaJ+3L0bQ=="
         // Watch Connectivity init
 		WCSession.defaultSession().delegate = self
