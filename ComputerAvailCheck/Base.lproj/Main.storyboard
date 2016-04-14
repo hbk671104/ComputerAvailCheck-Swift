@@ -28,7 +28,7 @@
                                 </connections>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="60" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-EY-bna">
-                                <rect key="frame" x="0.0" y="337" width="600" height="263"/>
+                                <rect key="frame" x="0.0" y="338" width="600" height="262"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.25490196079999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="buildingSectionHeader" rowHeight="60" id="gIx-dd-y5R">
@@ -171,13 +171,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SIn-Lv-a9p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="BR3-DJ-gLR"/>
+                            <constraint firstItem="SIn-Lv-a9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rbb-wF-zWX"/>
+                            <constraint firstItem="MeA-EY-bna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SSF-YE-1dh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MeA-EY-bna" secondAttribute="bottom" id="Xq5-8i-yic"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SIn-Lv-a9p" secondAttribute="trailing" constant="-20" id="bEu-sF-aqG"/>
-                            <constraint firstItem="MeA-EY-bna" firstAttribute="top" secondItem="SIn-Lv-a9p" secondAttribute="bottom" constant="-1" id="cJr-9s-A2I"/>
+                            <constraint firstItem="MeA-EY-bna" firstAttribute="top" secondItem="SIn-Lv-a9p" secondAttribute="bottom" id="cJr-9s-A2I"/>
                             <constraint firstItem="MeA-EY-bna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gws-OE-1WU"/>
                             <constraint firstItem="SIn-Lv-a9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="oIB-Jr-rtF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MeA-EY-bna" secondAttribute="trailing" constant="-20" id="q33-cQ-fLN"/>
+                            <constraint firstAttribute="trailing" secondItem="SIn-Lv-a9p" secondAttribute="trailing" id="w1U-gZ-urw"/>
+                            <constraint firstAttribute="trailing" secondItem="MeA-EY-bna" secondAttribute="trailing" id="w9m-HO-rmj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bEu-sF-aqG"/>
+                                <exclude reference="oIB-Jr-rtF"/>
+                                <exclude reference="gws-OE-1WU"/>
+                                <exclude reference="q33-cQ-fLN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ivh-rk-D7a"/>
                     <connections>
@@ -379,10 +391,18 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="zxX-ot-KfH" firstAttribute="top" secondItem="Uc9-Zi-OML" secondAttribute="bottom" id="59z-cQ-RQ2"/>
+                            <constraint firstItem="zxX-ot-KfH" firstAttribute="leading" secondItem="RMN-9p-Ubd" secondAttribute="leading" id="AeT-LD-ECG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zxX-ot-KfH" secondAttribute="trailing" constant="-20" id="Kbg-U5-I1f"/>
                             <constraint firstItem="zxX-ot-KfH" firstAttribute="leading" secondItem="RMN-9p-Ubd" secondAttribute="leadingMargin" constant="-20" id="Kc3-fV-VP6"/>
                             <constraint firstItem="V5u-vS-5Iv" firstAttribute="top" secondItem="zxX-ot-KfH" secondAttribute="bottom" id="mzg-Bg-NM5"/>
+                            <constraint firstAttribute="trailing" secondItem="zxX-ot-KfH" secondAttribute="trailing" id="pIM-kS-rzP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kbg-U5-I1f"/>
+                                <exclude reference="Kc3-fV-VP6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rh4-re-MSm"/>
                     <connections>
