@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 use_frameworks!
 
 def shared_pods
@@ -10,7 +10,6 @@ target 'ComputerAvailCheck' do
     platform :ios, '9.0'
     pod 'SOAPEngine', '~> 1.24'
     pod 'AMScrollingNavbar', '~> 2.0'
-    pod 'Whisper', '~> 2.0'
 	shared_pods
 end
 

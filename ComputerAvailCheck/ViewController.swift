@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import Whisper
 
 class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDelegate {
 
@@ -149,8 +148,7 @@ class ViewController: UIViewController, SOAPEngineDelegate, CLLocationManagerDel
 	}
 	
     func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-        let message = Murmur(title: error.localizedDescription)
-        Whistle(message)
+        // TODO: Show error message
         self.refreshControl.endRefreshing()
     }
 

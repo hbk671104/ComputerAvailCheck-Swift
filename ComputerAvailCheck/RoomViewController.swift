@@ -8,7 +8,6 @@
 
 import UIKit
 import AMScrollingNavbar
-import Whisper
 
 class RoomViewController: UIViewController, SOAPEngineDelegate {
 
@@ -99,8 +98,7 @@ class RoomViewController: UIViewController, SOAPEngineDelegate {
 	}
 	
 	func soapEngine(soapEngine: SOAPEngine!, didFailWithError error: NSError!) {
-		let message = Murmur(title: error.localizedDescription)
-		Whistle(message)
+		// TODO: Show error message
 		self.refreshControl.endRefreshing()
 	}
 	
